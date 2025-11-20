@@ -3,11 +3,50 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #c084fc 100%);
+    background: #0a0e1a;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(10, 14, 26, 0.85) 0%, rgba(20, 30, 60, 0.8) 50%, rgba(10, 20, 40, 0.85) 100%);
+    z-index: 1;
+}
+
+main {
+    position: relative;
+    z-index: 2;
 }
 
 .container {
@@ -60,10 +99,43 @@ body {
     outline: none;
     box-sizing: border-box;
     text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.search-box input:focus {
+    border-color: #00dcf4;
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(0, 220, 244, 0.1),
+                0 0 20px rgba(0, 220, 244, 0.4),
+                0 0 40px rgba(0, 220, 244, 0.2),
+                0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: input-glow 2s ease-in-out infinite;
+}
+
+@keyframes input-glow {
+    0%, 100% {
+        box-shadow: 0 0 0 3px rgba(0, 220, 244, 0.1),
+                    0 0 20px rgba(0, 220, 244, 0.4),
+                    0 0 40px rgba(0, 220, 244, 0.2),
+                    0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 0 4px rgba(0, 220, 244, 0.2),
+                    0 0 30px rgba(0, 220, 244, 0.6),
+                    0 0 60px rgba(0, 220, 244, 0.3),
+                    0 12px 32px rgba(0, 0, 0, 0.4);
+    }
 }
 
 .search-box input::placeholder {
     color: #999;
+    transition: color 0.3s ease;
+}
+
+.search-box input:focus::placeholder {
+    color: #bbb;
 }
 
 .stats-row {
@@ -237,7 +309,7 @@ body {
     padding: 20px 0;
     border: none;
     border-radius: 50px;
-    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+    background: linear-gradient(135deg, #00dcf4 0%, #00b4d8 50%, #0096c7 100%);
     color: #fff;
     font-size: 1.4rem;
     font-weight: 700;
@@ -246,15 +318,52 @@ body {
     letter-spacing: 2px;
     margin-bottom: 24px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3),
-                0 0 40px rgba(168, 85, 247, 0.4);
+                0 0 40px rgba(0, 220, 244, 0.4);
     transition: all 0.3s ease;
     border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4),
-                0 0 60px rgba(168, 85, 247, 0.6);
+                0 0 60px rgba(0, 220, 244, 0.6);
+    animation: button-pulse 1.5s ease-in-out infinite;
+}
+
+.cta-button:active {
+    transform: translateY(0);
+}
+
+@keyframes button-pulse {
+    0%, 100% {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4),
+                    0 0 60px rgba(0, 220, 244, 0.6);
+    }
+    50% {
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4),
+                    0 0 80px rgba(0, 220, 244, 0.8),
+                    0 0 120px rgba(0, 220, 244, 0.4);
+    }
 }
 
 .warning-box {
