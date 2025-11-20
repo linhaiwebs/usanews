@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--谷歌统计代码-->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11137298982"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11137298982');
+</script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-23S8VQDB90"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-23S8VQDB90');
+</script>
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof (url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'Add');
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11137298982/-yVUCL6ryM8aEKbk1r4p',
+                'transaction_id': '',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/main.css">
+    <script src="static/js/main.js"></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="hero-section">
+                <h1 class="main-title">AI STOCK INTELLIGENCE</h1>
+                <p class="main-subtitle">Advanced Market Intelligence & Predictive Analytics</p>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="inputbox" placeholder="Enter US stock symbol (AAPL, TSLA, NVDA, AMZN, GOOGL)" aria-label="Stock Symbol">
+            </div>
+
+            <button class="cta-button btn" type="button">ANALYZE NOW</button>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-value">$2.4B+</div>
+                    <div class="stat-label">ASSETS<br>ANALYZED</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">150.0K+</div>
+                    <div class="stat-label">ACTIVE<br>USERS</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">MARKET<br>COVERAGE</div>
+                </div>
+            </div>
+
+            <div class="platform-badge">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+                <span class="platform-text">ADVANCED AI MARKET PLATFORM</span>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #8b5cf6, #6366f1); border-radius: 16px;">🔒</div>
+                    <div class="feature-label">SECURE &<br>PRIVATE</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #ec4899, #f472b6); border-radius: 16px;">⏱️</div>
+                    <div class="feature-label">INSTANT<br>RESULTS</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #f59e0b, #fbbf24); border-radius: 16px;">✓</div>
+                    <div class="feature-label">VERIFIED<br>AI</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon" style="background: linear-gradient(135deg, #3b82f6, #60a5fa); border-radius: 16px;">📊</div>
+                    <div class="feature-label">INSTANT<br>RESULTS</div>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <div class="warning-icon">⚠️</div>
+                <div class="warning-text">
+                    <strong>**RISK WARNING**:</strong> Trading and investing involves substantial risk of loss and is not suitable for all investors. This information is for informational and educational purposes only and does not constitute financial, investment, or trading advice. Past performance is not indicative of future results.
+                </div>
+            </div>
+        </div>
+        <div class="ai-modal" id="ai-modal"
+            style="display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.7);
+    align-content: center;">
+            <div class="ai-progress" id="ai-progress">
+                <div class="pro-box"
+                    style="background:rgb(5 16 26);border-radius:12px;padding:32px 18px;max-width:340px;margin:60px auto;">
+                    <div class="title" style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+                        <div class="word" style="font-size:20px;font-weight:bold;">Analysis in Progress...</div>
+                    </div>
+                    <div class="progress-box">
+                        <div class="item" style="margin-bottom:16px;">
+                            <div class="i-title" style="font-size:15px;">Market Analysis</div>
+                            <div class="layui-progress layui-progress-big" lay-filter="progress-1"
+                                style="background:#eee;border-radius:8px;height:16px;">
+                                <div class="layui-progress-bar" id="bar-1" lay-percent="0%"
+                                    style="width: 0%;background:#00dcf4;height:100%;border-radius:8px;"></div>
+                            </div>
+                        </div>
+                        <div class="item" style="margin-bottom:16px;">
+                            <div class="i-title" style="font-size:15px;">Chart Analysis</div>
+                            <div class="layui-progress layui-progress-big" lay-filter="progress-2"
+                                style="background:#eee;border-radius:8px;height:16px;">
+                                <div class="layui-progress-bar" id="bar-2" lay-percent="0%"
+                                    style="width: 0%;background:#00dcf4;height:100%;border-radius:8px;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="i-title" style="font-size:15px;">News Analysis</div>
+                            <div class="layui-progress layui-progress-big" lay-filter="progress-3"
+                                style="background:#eee;border-radius:8px;height:16px;">
+                                <div class="layui-progress-bar" id="bar-3" lay-percent="0%"
+                                    style="width: 0%;background:#00dcf4;height:100%;border-radius:8px;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="ai-result" id="ai-result" style="display:none;">
+                <div class="result-box"
+                style="background:rgb(5 16 26);border-radius:12px;padding:32px 18px;max-width:340px;height: inherit;margin:60px auto;">
+                <div class="title" style="margin-bottom:18px;">
+                    <div class="word" style="font-size:18px;font-weight:bold;">
+                        <span id="tips-code" style="color:#15a223;"></span> 📊 Stock Report is Ready
+                    </div>
+                </div>
+                <div class="result-con">
+<div class="con" style="font-size:15px; margin-bottom:18px; color: #ffffff; text-align: center;">
+    <div>
+        🔍 Your analysis report has been generated. Contact us via <strong>WhatsApp</strong> to receive the report, and we’ll also share three stocks with strong potential to rise this Wednesday.
+        <br><br>
+        ✅ The report includes:
+        <ul style="padding-left: 0; list-style: none; margin-top: 8px; text-align: center;">
+            <li>Short-term price trend forecasts</li>
+            <li>Buy and sell timing suggestions</li>
+            <li>Analyst confidence ratings</li>
+        </ul>
+        <br>
+        ⏰ <span style="color: #e67e22; font-weight: bold;">Updated today – Free access ends soon</span>
+        <br>
+        💬 Your investment assistant is online to help.
+    </div>
+</div>
+                    <div class="disclaimer-text" style="color: #aaa; margin-bottom: 12px;">
+                        Past performance does not guarantee future results. Investment involves risk.
+                    </div>
+                    <button class="btn" id="chat-btn"
+                        style="background:#15a223;color:#fff;padding:12px 0;border-radius:8px;text-align:center;cursor:pointer;display:flex;justify-content:center;align-items:center;width:100%;margin:0 auto;animation:breath 1.6s infinite;"
+                        type="button">
+                        🔵 Connect with Investment Advisor
+                    </button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer class="footer" style="width:100%;max-width:500px;margin:24px auto 0 auto;padding:0 20px 24px 20px;box-sizing:border-box;text-align:center;">
+        <div class="footer-links">
+            <a href="contact/privacy.html">About Us</a>
+            <a href="contact/privacy.html">Privacy Policy</a>
+            <a href="contact/terms.html">Terms of Service</a>
+            <a href="contact/terms.html">Risk Disclaimer</a>
+        </div>
+        <div class="footer-note">
+            © 2025 AI Stock Intelligence. Advanced Market Intelligence Platform.<br>
+            Not financial advice. Trading involves risk of loss.** Operated by AI<br>
+            Insights Corp. | 123 Financial Tower, New York, NY 10005**
+        </div>
+    </footer>
+    <div id="cookie-banner"
+        style="display:flex;align-items:center;justify-content:center;position:fixed;left:0;right:0;bottom:0;z-index:999;background:rgba(20,30,60,0.98);color:#fff;padding:14px 12px 14px 12px;font-size:0.98rem;box-shadow:0 -2px 12px rgba(0,0,0,0.13);">
+        <span style="flex:1;">This website uses cookies to ensure you get the best experience.</span>
+        <button id="cookie-accept"
+            style="margin-left:18px;padding:7px 18px;border:none;border-radius:16px;background:linear-gradient(90deg,#1ec6e6 0%,#3eeaff 100%);color:#fff;font-weight:600;cursor:pointer;">Allow</button>
+    </div>
+    </div>
+    </div>
+</body>
+
+</html>
